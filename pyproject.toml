@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "espe-cli"
+version = "1.0.0"
+description = "Asistente académico para estudiantes de la ESPE"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["icalendar>=7.3.2,<8", "tzdata"]
+
+[project.scripts]
+espe = "espe_cli.cli:principal"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+namespaces = false
